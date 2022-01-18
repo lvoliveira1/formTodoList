@@ -1,7 +1,4 @@
-/*
-You to not need to change this planner.jsx file. This task only requires changes to the index.html file and the styles.css file.
-*/
-
+// Main app
 function App() {
     const addEvent = (text, dateLocalStr) => {
       const newEvents = [
@@ -14,7 +11,8 @@ function App() {
       ];
       setTodos(newEvents);
     };
-  
+    
+// Event form, that includes the tasks added to the app
     const EventForm = () => {
       const [value, setValue] = React.useState("");
       const handleSubmit = (e) => {
@@ -37,6 +35,7 @@ function App() {
       );
     };
   
+    // this is the function that will delete events from the todolist
     const removeEvent = (index) => {
       let temp = [...todos];
       temp.splice(index, 1);
@@ -44,6 +43,7 @@ function App() {
       setTodos(temp);
     };
   
+    // this is the boilerplate created to have some words added to the list by default
     const [todos, setTodos] = React.useState([
       {
         text: "Get Groceries",
